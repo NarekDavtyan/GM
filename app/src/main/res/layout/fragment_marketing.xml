@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Spinner
+            android:id="@+id/spinner_fragment_marketing_firms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"/>
+
+    <TextView
+            android:id="@+id/label_fragment_marketing_counts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/label_fragment_marketing_showed_cigarette_count"
+            android:layout_below="@id/spinner_fragment_marketing_firms"/>
+
+    <LinearLayout
+            android:id="@+id/layout_fragment_marketing_sales_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_below="@id/label_fragment_marketing_counts"
+            android:background="@color/blue"
+            android:gravity="center" >
+        <TextView
+                android:id="@+id/label_fragment_marketing_brand"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/label_fragment_marketing_brand"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+                android:id="@+id/label_fragment_marketing_cigarette_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text="@string/label_fragment_marketing_cigarette_price"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+                android:id="@+id/label_fragment_marketing_cigarette_count"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/label_fragment_marketing_cigarette_count"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/pager_fragment_marketing_sales_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_fragment_marketing_sales_info"
+            android:layout_above="@+id/layout_fragment_marketing_action"/>
+
+    <LinearLayout
+            android:id="@id/layout_fragment_marketing_action"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+        <TextView
+                android:id="@+id/label_fragment_marketing_previous"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:text="@string/label_fragment_marketing_previous"
+                android:textColor="@color/light_gray"
+                android:gravity="center"
+                android:background="@drawable/bg_stroke"
+                />
+        <LinearLayout
+                android:id="@+id/layout_fragment_marketing_new_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:padding="5dp"
+                android:orientation="horizontal"
+                android:gravity="left">
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/content_description"
+                    android:scaleType="centerInside"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_fragment_marketing_add_action"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="@string/label_fragment_marketing_new_action"/>
+        </LinearLayout>
+        <TextView
+                android:id="@+id/label_fragment_marketing_next"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.35"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:text="@string/label_fragment_marketing_next"
+                android:textColor="@color/light_gray"
+                android:background="@drawable/bg_stroke"/>
+    </LinearLayout>
+</RelativeLayout>

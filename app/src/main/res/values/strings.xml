@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GrandMarketing</string>
+    <string name="action_ok">Հաստատել</string>
+    <string name="action_cancel">Հրաժարվել</string>
+    <string name="content_description"/>
+
+    <!-- **************** Main Activity ********************** -->
+    <string name="label_activity_main_ggim">  Աշխատանք  </string>
+    <string name="label_activity_main_marketing">  Մարքեթինգ  </string>
+    <string name="label_activity_main_address">    Հասցե     </string>
+    <string name="label_activity_main_vk_info">  Հիմնական   </string>
+    <string name="label_activity_main_ad"> Գով. նյութեր </string>
+    <string name="label_activity_main_gifts">   Նվերներ    </string>
+    <string name="label_activity_main_notes">Նշումներ</string>
+
+    <!-- **************** Login Activity ********************* -->
+    <string name="label_activity_login_username">Անուն</string>
+    <string name="label_activity_login_password">Ծածկագիր</string>
+    <string name="label_activity_login_title">Խնդրում ենք մուտքագրեք Ձեր տվյալները</string>
+    <string name="toast_activity_login_empty_data">Օգտագործողի անունը և ծածկագիրը պետք է լրացված լինեն։</string>
+
+    <!-- **************** Routes Activity ****************** -->
+    <string name="action_activity_routes_break">Ընդհատել աշխատանքը</string>
+    <string name="action_activity_routes_filter">Ֆիլտր</string>
+    <string name="action_activity_routes_exit">Դուրս գալ ծրագրից</string>
+    <string name="action_activity_routes_pause_break">Ընդմիջում</string>
+    <string name="action_activity_routes_product_break">Ապրանքի ստացում</string>
+
+    <!-- **************** Marketing Fragment ****************** -->
+    <string name="label_fragment_marketing_previous">Նախորդ</string>
+    <string name="label_fragment_marketing_next">Հաջորդ</string>
+    <string name="label_fragment_marketing_new_action">Նոր Ակցիա</string>
+    <string name="label_fragment_marketing_showed_cigarette_count">Ցուցադրված սիգարետների քանակը՝  GT %1$s, Այլ՝ %2$s</string>
+    <string name="label_fragment_marketing_brand">Ապրանք</string>
+    <string name="label_fragment_marketing_cigarette_price">Գին</string>
+    <string name="label_fragment_marketing_cigarette_count">Քանակ</string>
+    <string name="label_row_cigarette_sale_name">%1$d. %2$s</string>
+    <string name="label_row_cigarette_sale_info">Խեժ/Նիկոտին` %1$s/%2$s, Երկարություն` %3$s, Տրամաչափ` %4$s</string>
+    <string name="label_all">Բոլորը</string>
+
+    <!--**************** Address Fragment ************************-->
+    <string name="label_fragment_address_country">Պետություն</string>
+    <string name="label_fragment_address_region">Մարզ</string>
+    <string name="label_fragment_address_city">Քաղաք/Գյուղ</string>
+    <string name="label_fragment_address_street">Փողոց</string>
+    <string name="label_fragment_address_house">Շենք</string>
+    <string name="label_fragment_address_x_coord">X կոորդ</string>
+    <string name="label_fragment_address_y_coord">Y կոորդ</string>
+    <string name="label_fragment_address_notes">Ցուցումներ</string>
+    <string name="label_fragment_address_accuracy">Ճշտություն</string>
+
+    <!--**************** Vk Info Fragment ************************-->
+    <string name="label_fragment_vk_info_code">Խանութի կոդ</string>
+    <string name="label_fragment_vk_info_name">Խանութի անուն</string>
+    <string name="label_fragment_vk_info_class">Կարգ</string>
+    <string name="label_fragment_vk_info_company_name">Կազմակերպության անունը</string>
+    <string name="label_fragment_vk_info_manager">Անձ</string>
+    <string name="label_fragment_vk_info_organization">Կազմ. իրավ. ձև</string>
+    <string name="label_fragment_vk_info_phone_number">Հեռախոս</string>
+    <string name="label_fragment_vk_info_category">Տեսակը</string>
+    <string name="label_fragment_vk_info_cooperation">Համագործ.</string>
+    <string name="label_fragment_vk_info_supplier">Մատակարարող</string>
+    <string name="label_fragment_vk_info_opened_status">Աշխատուն.</string>
+    <string name="label_fragment_vk_info_hvhh">ՀՎՀՀ</string>
+    <string name="label_fragment_vk_info_notes">Նշումներ</string>
+    <string name="label_fragment_vk_info_suggeastions">Բողոք/Առաջարկ</string>
+
+    <!--**************** Advertisement Fragment ************************-->
+    <string name="label_fragment_ad_title_name">Անվանումը</string>
+    <string name="label_fragment_ad_title_count">Քանակը</string>
+    <string name="action_fragment_ad_ordered_ads">Գով. նյութերի պատվերներ</string>
+    <string name="action_fragment_ad_ordered_stands">Ցույց տալ ստենդների պատվերները</string>
+    <string name="action_fragment_ad_competitors_stands">Մրցակիցների ստենդներ</string>
+    <string name="action_fragment_ad_competitors_ads">Մարցակիցների գով. նյութեր</string>
+</resources>

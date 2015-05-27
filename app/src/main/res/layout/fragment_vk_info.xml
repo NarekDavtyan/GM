@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/fragment_padding">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_code"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+                android:id="@+id/label_fragment_vk_info_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_name"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_class"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+                android:id="@+id/label_fragment_vk_info_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_company_name"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_company_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_manager"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_manager"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_organization"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Spinner
+                android:id="@+id/spinner_fragment_vk_info_organization"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_phone_number"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="phone"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_category"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Spinner
+                android:id="@+id/spinner_fragment_vk_info_category"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_supplier"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Spinner
+                android:id="@+id/spinner_fragment_vk_info_supplier"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_cooperation"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Spinner
+                android:id="@+id/spinner_fragment_vk_info_cooperation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_opened_status"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <Spinner
+                android:id="@+id/spinner_fragment_vk_info_opened_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_hvhh"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_hvhh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="phone"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_notes"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_note"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="phone"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_vk_info_suggeastions"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_vk_info_suggestions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="phone"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+</LinearLayout>

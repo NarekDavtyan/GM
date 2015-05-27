@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_fragment_ad_titles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:gravity="left"
+            android:text="@string/label_fragment_ad_title_name"
+            android:textSize="@dimen/label_title_text_size"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="@string/label_fragment_ad_title_count"
+            android:textSize="@dimen/label_title_text_size"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view_fragment_ad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_fragment_ad_titles"
+        android:layout_above="@+id/layout_fragment_ad_orders"
+        android:background="@drawable/bg_stroke"/>
+
+    <LinearLayout
+        android:id="@id/layout_fragment_ad_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/layout_fragment_ad_competitors">
+        <Button
+            android:id="@+id/action_fragment_ad_ordered_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_fragment_ad_ordered_ads"/>
+
+        <Button
+            android:id="@+id/action_fragment_ad_ordered_stands"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_fragment_ad_ordered_stands"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/layout_fragment_ad_competitors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/action_fragment_ad_competitors_stands"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/action_fragment_ad_competitors_stands"
+            style="?android:attr/buttonBarStyle"/>
+
+        <Button
+            android:id="@+id/action_fragment_ad_competitors_ads"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/action_fragment_ad_competitors_ads"
+            style="?android:attr/buttonBarStyle"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/fragment_padding">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_country"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_address_country"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_region"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_address_region"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_city"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_address_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_street"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_address_street"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_house"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_address_house"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_x_coord"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+                android:id="@+id/label_fragment_address_x_coord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_y_coord"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+                android:id="@+id/label_fragment_address_y_coord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_accuracy"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <TextView
+                android:id="@+id/label_fragment_address_accuracy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/label_fragment_address_notes"
+                android:textColor="@android:color/white"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <EditText
+                android:id="@+id/input_fragment_address_notes"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="0.5"
+                android:padding="5dp"
+                android:inputType="text"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </LinearLayout>
+</LinearLayout>
