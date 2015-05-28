@@ -18,7 +18,7 @@
                 android:textColor="@android:color/white"
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-        <EditText
+        <AutoCompleteTextView
                 android:id="@+id/input_fragment_address_country"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
 
         <EditText
-                android:id="@+id/input_fragment_address_region"
+                android:id="@+id/input_fragment_address_state"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"

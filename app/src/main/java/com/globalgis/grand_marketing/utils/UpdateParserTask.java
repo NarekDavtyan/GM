@@ -12,6 +12,7 @@ import com.globalgis.grand_marketing.database.DbManager;
 import com.globalgis.grand_marketing.interfaces.IParserStatusListener;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 public class UpdateParserTask extends AsyncTask<Void, Void, Void> {
@@ -69,6 +70,7 @@ public class UpdateParserTask extends AsyncTask<Void, Void, Void> {
     private void readTableData(JsonNode jsonNode, DbManager dbManager, String tableName) throws IOException {
         // Iterate over object fields:
         Iterator<JsonNode> nodeKeys = jsonNode.elements();
+        ArrayList<ContentValues> valuesList = new ArrayList<>();
         ContentValues values;
         while (nodeKeys.hasNext()) {
             values = new ContentValues();
@@ -80,8 +82,9 @@ public class UpdateParserTask extends AsyncTask<Void, Void, Void> {
                 String name = columnNames.next();
                 String value = columnValue.asText();
                 values.put(name, value);
+                valuesList.add(values);
             }
-            dbManager.insertOrUpdate(tableName, values);
         }
+        dbManager.insertOrUpdateQuick(tableName, valuesList);
     }
 }

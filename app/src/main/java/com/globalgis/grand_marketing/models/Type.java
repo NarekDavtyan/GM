@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Type {
 
-	
+
 	/**
 	 * @uml.property  name="typeName"
 	 */
@@ -21,7 +21,7 @@ public class Type {
 	 * @uml.property  name="version"
 	 */
 	private int version = 0;
-	
+
 	/**
 	 * @return
 	 * @uml.property  name="id"
@@ -37,7 +37,7 @@ public class Type {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	
 	public Type(String typename, Calendar last_update, int version)
 	{
@@ -61,7 +61,7 @@ public class Type {
 	public void setTypeName(String typeName) {
 		this.typeName = typeName;
 	}
-	
+
 	public String toString()
 	{
 		return "Name: " + this.typeName + " Version: " + this.version;

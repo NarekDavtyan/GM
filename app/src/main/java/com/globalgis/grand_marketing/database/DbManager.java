@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteStatement;
 import android.util.Log;
 import android.util.SparseArray;
 import com.globalgis.grand_marketing.models.Cigarette;
@@ -13,6 +14,7 @@ import com.globalgis.grand_marketing.models.Firm;
 import com.globalgis.grand_marketing.models.Vk;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 public class DbManager {
     private SQLiteDatabase mDatabase;
@@ -106,6 +108,28 @@ public class DbManager {
         return DbUtils.getCigarettesFromCursor(cursor);
     }
 
+    public Cursor getTypeObjects(String tableName) {
+        return mDatabase.query(tableName, null, null, null, null, null, Table.ROW);
+    }
+
+    public Cursor filterTypeObjects(String tableName, CharSequence constraint) {
+        String select = TypeTable.NAME + " LIKE ? ";
+        String[]  selectArgs = { "%" + constraint + "%"};
+        return mDatabase.query(tableName, null, select, selectArgs, null, null, Table.ROW);
+    }
+
+    public String getTypeObject(String tableName, int id) {
+        String rv = "";
+        String select = Table.ID + " = ? ";
+        String[]  selectArgs = { String.valueOf(id)};
+        Cursor cursor = mDatabase.query(tableName, null, select, selectArgs, null, null, Table.ROW);
+        if (cursor.moveToFirst()) {
+            rv = cursor.getString(cursor.getColumnIndex(TypeTable.NAME));
+        }
+
+        return rv;
+    }
+
     public void insertOrUpdate(String tableName, ContentValues values) {
         if(values.containsKey(Table.ID)) {
             int update = mDatabase.update(tableName, values, Table.ID + " = ?", new String[]{values.getAsString(Table.ID)});
@@ -118,7 +142,50 @@ public class DbManager {
         } else {
             long insertedId = mDatabase.insert(tableName, null, values);
             Log.d(TAG, String.format("Inserted in %s (%d)", tableName, insertedId));
-            Log.d(TAG, String.format("Data for %s doesn't contains 'id'", tableName));
         }
+    }
+
+    public void insertOrUpdateQuick(String tableName, ArrayList<ContentValues> valuesList) {
+        if (valuesList.size() > 0) {
+            Set<String> keys = valuesList.get(0).keySet();
+            String sql = createInsert(tableName, keys);
+            SQLiteStatement stmt = mDatabase.compileStatement(sql);
+
+            mDatabase.beginTransaction();
+            String tmp;
+            for (ContentValues values : valuesList) {
+                keys = values.keySet();
+                for (int i = 0; i < keys.size(); i++) {
+                    tmp = values.getAsString(keys.iterator().next());
+                    stmt.bindString(i + 1, tmp == null ? "" : tmp);
+                }
+                stmt.execute();
+                stmt.clearBindings();
+            }
+
+            mDatabase.setTransactionSuccessful();
+            mDatabase.endTransaction();
+        }
+    }
+
+    static public String createInsert(final String tableName, Set<String> columnNames) {
+        if (tableName == null || columnNames == null || columnNames.size() == 0) {
+            throw new IllegalArgumentException();
+        }
+        final StringBuilder s = new StringBuilder();
+        s.append("INSERT INTO ").append(tableName).append(" (");
+        for (String column : columnNames) {
+            s.append(column).append(" ,");
+        }
+        int length = s.length();
+        s.delete(length - 2, length);
+        s.append(") VALUES( ");
+        for (int i = 0; i < columnNames.size(); i++) {
+            s.append(" ? ,");
+        }
+        length = s.length();
+        s.delete(length - 2, length);
+        s.append(")");
+        return s.toString();
     }
 }

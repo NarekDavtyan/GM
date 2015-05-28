@@ -22,6 +22,7 @@ public class DbHelper extends SQLiteOpenHelper{
         CigaretteSalesTable.onCreate(sqLiteDatabase);
         CigarettesTable.onCreate(sqLiteDatabase);
         PendingDataTable.onCreate(sqLiteDatabase);
+        CountryTable.onCreate(sqLiteDatabase);
     }
 
     @Override

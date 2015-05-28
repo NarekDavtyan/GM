@@ -18,6 +18,7 @@ public class APIClient {
 
     private static final String SERVER_URL = "http://mob.globalgis.am/MarketingData.ashx";
     private static final String COMMIT = "/commit";
+    private static final String UPDATE = "/update";
 
     private static final String TAG = APIClient.class.getSimpleName();
 
@@ -27,8 +28,8 @@ public class APIClient {
 
         try {
             final List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-            nameValuePairs.add(new BasicNameValuePair("username", username));
-            nameValuePairs.add(new BasicNameValuePair("password", password));
+            nameValuePairs.add(new BasicNameValuePair("Username", username));
+            nameValuePairs.add(new BasicNameValuePair("Password", password));
             post.setEntity(new UrlEncodedFormEntity(nameValuePairs));
         } catch (UnsupportedEncodingException e){
             e.printStackTrace();
@@ -43,6 +44,7 @@ public class APIClient {
         try{
             final List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
             //nameValuePairs.add(new BasicNameValuePair("token", "");
+            nameValuePairs.add(new BasicNameValuePair("CommandType", "update"));
             JSONObject tablesJSON = new JSONObject();
             JSONArray tablesArray = new JSONArray();
             JSONObject vkTable = new JSONObject();
@@ -66,6 +68,7 @@ public class APIClient {
         Log.v(TAG, "insert data " + insertData);
         try{
             final List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
+            nameValuePairs.add(new BasicNameValuePair("CommandType", "commit"));
             nameValuePairs.add(new BasicNameValuePair("insert", insertData));
 
             post.setEntity(new UrlEncodedFormEntity(nameValuePairs));

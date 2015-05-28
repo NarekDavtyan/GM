@@ -13,7 +13,6 @@ import com.globalgis.grand_marketing.VkInWork;
 import com.globalgis.grand_marketing.client.APIClient;
 import com.globalgis.grand_marketing.client.APIRequestListener;
 import com.globalgis.grand_marketing.fragments.*;
-import org.json.JSONObject;
 
 public class VkActivity extends BaseActivity implements ActionBar.TabListener {
 
@@ -96,7 +95,7 @@ public class VkActivity extends BaseActivity implements ActionBar.TabListener {
             Fragment fragment = null;
             switch (i) {
                 case 0:
-                    fragment = new AddressFragment();
+                    fragment = new VkAddressFragment();
                     break;
                 case 1:
                     fragment = new VkInfoFragment();

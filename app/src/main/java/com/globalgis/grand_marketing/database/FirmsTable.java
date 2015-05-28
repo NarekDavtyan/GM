@@ -3,7 +3,7 @@ package com.globalgis.grand_marketing.database;
 import android.database.sqlite.SQLiteDatabase;
 
 public class FirmsTable implements Table{
-    public static final String FIRMS_TABLE = "Fiems";//TODO change after server side change
+    public static final String FIRMS_TABLE = "Firms";
     public static final String NAME = "FirmName";
     public static final String IS_OWN = "Own";
 
